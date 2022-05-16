@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+body {
+  background-image: url('twitter_wallpaper_004.png');
+}
+</style>
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+
+		</div>
+		<h2>Twitter Sentiment Analysis</h2>
+
+	</div>
+	</header>
+
+
+	<div class="results">
+
+
+
+	{% if prediction == 1%}
+	<h2 style="color:red;">Hate Speech</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Not a Hate Speech</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
